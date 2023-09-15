@@ -1,0 +1,30 @@
+.menu {
+  width: 28rem;
+  font-size: 1.2rem;
+}
+
+.menu > .title-card {
+  background: linear-gradient(165deg, #054a94, #3281e2);
+  padding: 1.5rem 0 0.75rem 0;
+  white-space: nowrap;
+}
+.menu h1 {
+  font-family: "SignPainter", "Helvetica", -system-ui, sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu > .subtitle-card {
+  background: black;
+  color: #1f6cd1;
+  padding: 0.45rem 0.65rem;
+}
+
+.menu > .description {
+  padding: 0.45rem 0.65rem;
+  margin-top: 0.45rem;
+
+  background: rgba(0, 0, 0, 0.7);
+  border-top: rgba(0, 0, 0, 0.95) solid 5px;
+}

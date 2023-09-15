@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "SignPainter";
+  src: url("vendor/SignPainter.ttf");
+}
+@font-face {
+  font-family: "Chalet";
+  src: url("vendor/ChaletLondonNineteenSixty.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+    FONT SETUP AND SIZING
+
+    Below we setup different font sizes depending on the screen width.
+    Even if the font sizes don't match, all other styling will be based off this
+    root font size, so it's very important that these don't change
+*/
+
+/* sm */
+html {
+  font-family: "Chalet", "Helvetica", -system-ui, sans-serif;
+  font-size: 14px;
+  color: white;
+}
+/* md */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+/* lg */
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+}
+/* xl */
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 2%;
+}
+.menu-container.left {
+  left: 2%;
+}
+.menu-container.right {
+  right: 2%;
+}

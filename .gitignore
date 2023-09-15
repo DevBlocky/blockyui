@@ -1,0 +1,8 @@
+# directories
+/.vscode
+/dist
+node_modules
+
+# generated files
+.yarn.installed
+*.log
