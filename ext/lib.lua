@@ -589,16 +589,15 @@ function MenuButton:dbg(selected)
     if self.type == 'checkbox' then
         rightExtra = { {
             type = 'icon',
-            prefix = self.checked and 'fas' or 'far',
-            name = self.checked and 'check-square' or 'square',
-            size = '1x'
+            name = self.checked and 'check_box' or 'check_box_outline_blank',
+            fill = self.checked,
         } }
     elseif self.type == 'list' then
         local d = self.list[self.selected]
         rightExtra = tblConcat(
-            { type = 'icon', prefix = 'fas', name = 'chevron-left', size = 'xs' },
+            { type = 'icon', name = 'chevron_left' },
             d or {},
-            { type = 'icon', prefix = 'fas', name = 'chevron-right', size = 'xs' }
+            { type = 'icon', name = 'chevron_right' }
         )
     end
     return {

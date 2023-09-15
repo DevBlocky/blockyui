@@ -1,16 +1,10 @@
 import "./CustomText.css";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  IconPrefix,
-  IconName,
-  SizeProp,
-} from "@fortawesome/fontawesome-svg-core";
 
 export type InlineType =
   | string
   | { type: "text"; text: string }
-  | { type: "icon"; prefix: IconPrefix; name: IconName; size?: SizeProp | null }
+  | { type: "icon"; name: string; fill?: boolean }
   | { type: "template"; template: string };
 const CustomText: (props: {
   children?: InlineType[];
@@ -22,12 +16,15 @@ const CustomText: (props: {
       return <span key={i}>{typeof x === "string" ? x : x.text}</span>;
     else if (x.type === "icon")
       return (
-        <div className="inline-icon" key={i}>
-          <FontAwesomeIcon
-            icon={[x.prefix, x.name]}
-            size={x.size || undefined}
-          />
-        </div>
+        <span
+          className="material-symbols-outlined"
+          style={{
+            fontSize: "1.2em",
+            fontVariationSettings: x.fill ? "'FILL' 1" : "",
+          }}
+        >
+          {x.name}
+        </span>
       );
     else if (x.type === "template")
       return (

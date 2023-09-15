@@ -15,39 +15,6 @@ function useMessageListener<T = any>(
   }, [listener]);
 }
 
-let exampleState: MenuState = {
-  id: 0,
-  align: "right",
-  title: "Just Another Menu",
-  subtitle: ["Hello World"],
-  buttons: [
-    {
-      id: 1,
-      left: ["Example Button 1"],
-      right: [
-        { type: "icon", prefix: "fas", name: "chevron-left" },
-        " List ",
-        { type: "icon", prefix: "fas", name: "chevron-right" },
-      ],
-    },
-    {
-      id: 2,
-      left: [
-        { type: "icon", prefix: "fas", name: "lock" },
-        " ",
-        "Disabled Button",
-      ],
-      disabled: true,
-    },
-    {
-      id: 3,
-      left: ["Example Checkbox"],
-      right: [{ type: "icon", prefix: "fas", name: "check-square" }],
-      selected: true,
-    },
-  ],
-};
-
 const App: React.FC = () => {
   const [state, setState] = useState<MenuState[]>([]);
 

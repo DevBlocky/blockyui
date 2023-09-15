@@ -2,10 +2,10 @@
     SCRIPT INFORMATION BELOW
     PLEASE REFER TO LICENSE BEFORE MODIFICATION
 ]]
-version '0.1.0a'
+version '0.1.0'
 author 'DevBlocky'
 description 'TODO'
-repository 'https://github.com/DevBlocky/neo-ui'
+repository 'https://github.com/DevBlocky/blockyui'
 
 -- required fxmanifest stuff
 fx_version 'cerulean'
@@ -23,6 +23,6 @@ server_script 'core/sv.lua'
 client_script 'core/main.lua'
 
 -- development shit
--- blockyui_resource 'mui'
--- client_script 'ext/lib*.lua'
--- client_script 'test.lua'
+blockyui_resource 'blockyui'
+client_script 'ext/lib*.lua'
+client_script 'example.lua'
